@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Om Mig</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+    :root {
+      --primary-color: #b8daf3;
+      --primary-color-dark: #3c33ea;
+      --secondary-color: #5861ac;
+      --text-dark: #1f2937;
+      --text-light: #6b7280;
+      --extra-light: #f5f9ff;
+      --max-width: 1200px;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: var(--extra-light);
+    }
+
+    nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #ffffff;
+      z-index: 99;
+    }
+
+    .nav__content {
+      max-width: var(--max-width);
+      margin: auto;
+      padding: 1.5rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav .logo a {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      transition: 0.3s;
+    }
+
+    nav .logo a:hover {
+      color: var(--primary-color-dark);
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      list-style: none;
+    }
+
+    ul li a {
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      transition: 0.3s;
+    }
+
+    ul li a:hover {
+      color: var(--secondary-color);
+    }
+
+    .section__container {
+      min-height: 100vh;
+      max-width: var(--max-width);
+      margin: auto;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem;
+    }
+
+    .title {
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+    }
+
+    .description {
+      line-height: 1.5rem;
+      color: var(--text-light);
+      margin-bottom: 2rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+    }
+
+    table, th, td {
+      border: 2px solid var(--primary-color);
+    }
+
+    th, td {
+      padding: 1rem;
+      text-align: left;
+      color: var(--text-dark);
+    }
+
+    th {
+      background-color: var(--primary-color);
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    td {
+      background-color: #ffffff;
+    }
+
+    @media (width < 750px) {
+      .section__container {
+        padding: 10rem 1rem 5rem 1rem;
+        text-align: center;
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav__content">
+      <div class="logo">
+        <a href="#">Om Mig</a>
+      </div>
+      <ul>
+        <li><a href="index.html">Hjem</a></li>
+        <li><a href="contact.html">Om Mig</a></li>
+        <li><a href="info.html">Kontakt</a></li>
+        <li><a href="musik.html">Musikalbumarkiv</a></li>
+        <li><a href="aflevering2.html">aflevering2</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section__container">
+    <div class="content">
+      <h2 class="title">Om Mig</h2>
+      <p class="description">Her er nogle af de ting, jeg elsker at lave i min fritid.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Interesse</th>
+            <th>Beskrivelse</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Træne i fitnesscentret</td>
+            <td>Jeg elsker at holde mig i form og løfte vægte.</td>
+          </tr>
+          <tr>
+            <td>Lave lækker mad</td>
+            <td>Jeg nyder at eksperimentere med nye opskrifter i køkkenet.</td>
+          </tr>
+          <tr>
+            <td>Gå ture i naturen</td>
+            <td>At være ude i naturen hjælper mig med at slappe af og genoplade.</td>
+          </tr>
+          <tr>
+            <td>Lære at kode</td>
+            <td>Jeg elsker at udforske nye teknologier og bygge spændende projekter.</td>
+          </tr>
+          <tr>
+            <td>Være sammen med venner og kæreste</td>
+            <td>Tid med dem jeg holder af betyder meget for mig.</td>
+          </tr>
+          <tr>
+            <td>Stå på ski om vinteren</td>
+            <td>Om vinteren elsker jeg at tilbringe tid på ski i bjergene.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
